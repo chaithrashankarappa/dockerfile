@@ -1,0 +1,15 @@
+version : '3'
+   services :
+     mongo-express :
+       image : mongo-express
+       networks :
+          - chaithranet1
+     mongo :
+          image : mongo
+          volumes :
+         - “var/lib/docker/volumes/chaithravol1/-data
+         networks :
+         - chaithranet1
+  networks :
+      chaithranet1 :
+      driver : bridge
